@@ -42,22 +42,26 @@ Chaque environnement (`dev`, `test`, `prod`) possède :
 
 ## 🚧 Structure du projet
 
-├── infra/
-│ ├── modules/
-│ │ ├── vpc/
-│ │ ├── ec2/
-│ │ ├── rds/
-│ │ └── alb/
-│ ├── envs/
-│ │ ├── dev/
-│ │ ├── test/
-│ │ └── prod/
-├── ansible/
-│ ├── roles/
-│ ├── inventories/
-│ └── playbook.yml
-├── .gitlab-ci.yml
-└── README.md
+.
+├── infra/                      # Infrastructure as Code (Terraform)
+│   ├── modules/               # Reusable Terraform modules
+│   │   ├── vpc/               # VPC module: networking components
+│   │   ├── ec2/               # EC2 module: compute instances
+│   │   ├── rds/               # RDS module: database provisioning
+│   │   └── alb/               # ALB module: application load balancer setup
+│   ├── envs/                  # Environment-specific configurations
+│   │   ├── dev/               # Development environment
+│   │   ├── test/              # Testing/Staging environment
+│   │   └── prod/              # Production environment
+│
+├── ansible/                   # Configuration management with Ansible
+│   ├── roles/                 # Role-based task definitions
+│   ├── inventories/           # Inventory files for different environments
+│   └── playbook.yml           # Main Ansible playbook
+│
+├── .gitlab-ci.yml             # GitLab CI/CD pipeline configuration
+└── README.md                  # Project documentation
+
 
 
 ---
