@@ -42,6 +42,7 @@ Chaque environnement (`dev`, `test`, `prod`) possède :
 
 ## 🚧 Structure du projet
 
+```bash
 ├── infra/                      # Infrastructure as Code (Terraform)
 │   ├── modules/               # Reusable Terraform modules
 │   │   ├── vpc/               # VPC module: networking components
@@ -60,6 +61,7 @@ Chaque environnement (`dev`, `test`, `prod`) possède :
 │
 ├── .gitlab-ci.yml             # GitLab CI/CD pipeline configuration
 └── README.md                  # Project documentation
+```
 
 
 
@@ -73,27 +75,6 @@ Le pipeline GitLab intègre :
 - `tfsec` et `checkov` pour l'analyse de sécurité
 - `ansible-lint` pour la validation des playbooks
 - Scan de secrets et validations YAML
-
----
-.
-├── infra/                      # Infrastructure as Code (Terraform)
-│   ├── modules/               # Reusable Terraform modules
-│   │   ├── vpc/               # VPC module: networking components
-│   │   ├── ec2/               # EC2 module: compute instances
-│   │   ├── rds/               # RDS module: database provisioning
-│   │   └── alb/               # ALB module: application load balancer setup
-│   ├── envs/                  # Environment-specific configurations
-│   │   ├── dev/               # Development environment
-│   │   ├── test/              # Testing/Staging environment
-│   │   └── prod/              # Production environment
-│
-├── ansible/                   # Configuration management with Ansible
-│   ├── roles/                 # Role-based task definitions
-│   ├── inventories/           # Inventory files for different environments
-│   └── playbook.yml           # Main Ansible playbook
-│
-├── .gitlab-ci.yml             # GitLab CI/CD pipeline configuration
-└── README.md                  # Project documentation
 
 --
 
