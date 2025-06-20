@@ -1,0 +1,41 @@
+# --- TERRAFORM ---
+*.tfstate
+*.tfstate.backup
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate.backup
+
+# --- VARIABLES SENSIBLES ---
+*.tfvars
+*.tfvars.json
+
+# --- LOGS D'ERREURS ---
+crash.log
+crash.*.log
+
+# --- FICHIERS D'ÉTAT PAR ENVIRONNEMENT ---
+dev/*.tfstate*
+test/*.tfstate*
+prod/*.tfstate*
+
+# --- FICHIERS DE CONFIG LOCALE (optionnels à ignorer si générés par l'utilisateur) ---
+envs/*/dev/backend.tf
+test/backend.tf
+prod/backend.tf
+
+# --- ÉDITEURS ---
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# --- CI/CD ---
+*.auto.tfvars # si tu génères des vars automatiquement dans GitLab CI/CD
+
+# --- CLÉS SSH OU CERTIFICATS (ne jamais versionner) ---
+*.pem
+*.key
+*.crt
+id_rsa*
+id_ecdsa*
